@@ -1,3 +1,5 @@
+## Google Cloud Compute Engine
+## VM RStudio Server
 
 options(googleAuthR.scopes.selected = "https://www.googleapis.com/auth/cloud-platform")
 
@@ -15,10 +17,6 @@ library(googleComputeEngineR)
 
 gce_global_project(project)
 gce_global_zone(zone)
-
-default_project <- gce_get_project("ecomm-197702")
-default_project$name
-default_project$id
 
 vm <- gce_vm(template = "rstudio",
              name = "rstudio-server",
