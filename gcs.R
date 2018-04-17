@@ -4,7 +4,7 @@
 options(googleAuthR.scopes.selected = "https://www.googleapis.com/auth/cloud-platform")
 
 project <- "ecomm-197702"
-zone <- "us-central1-a"
+zone <- "us-east4-a"
 account_key <- "gcs-key.json"
 
 Sys.setenv(
@@ -19,7 +19,7 @@ gce_global_project(project)
 gce_global_zone(zone)
 
 vm <- gce_vm(template = "rstudio",
-             name = "rstudio-server",
+             name = "rstudio-server-standard",
              username = "dmarrero",
-             password = "dmarrero",
-             predefined_type = "f1-micro")
+             password = "mpc2gxljv2080",
+             predefined_type = "n1-standard-1")
